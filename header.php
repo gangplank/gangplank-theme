@@ -37,7 +37,7 @@
       <div class="nav-collapse collapse">
         <ul class="nav">
         <?
-            $args['theme_location'] = 'main_menu';
+            $args['theme_location'] = 'primary';
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'main-menu';
