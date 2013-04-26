@@ -6,6 +6,8 @@
  * @since gp4 1.0
  */
 
+include 'library/admin/admin-write.php';
+
 
 if ( ! function_exists( 'gp4_setup' ) ) :
 

@@ -67,21 +67,21 @@
         &nbsp;
       </div>
       <div class="span8">
-        <h1 class="slogan pull-right"><?php echo get_post_meta($post->ID, 'gp_slogan', true); ?></h1>
+        <h1 class="slogan pull-right"><?php echo get_post_meta($post->ID, '_gp4_slogan', true); ?></h1>
       </div>
     </div>
   </header>
 
-  <?php if (get_post_meta($post->ID, 'gp_hero_title', true)) { ?>
+  <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
   <div class="row-fluid">
     <div class="span12">
       <div class="hero-unit featured">
-        <h1><?php echo get_post_meta($post->ID, 'gp_hero_title', true); ?></h1>
+        <h1><?php echo get_post_meta($post->ID, '_gp4_hero_title', true); ?></h1>
         <p>
           <span class="promo">
-            <?php echo get_post_meta($post->ID, 'gp_hero_subtitle', true); ?>
-            <?php if (get_post_meta($post->ID, 'gp_hero_button_url', true)) { ?>
-              <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID, 'gp_hero_button_url', true); ?>"><?php echo get_post_meta($post->ID, 'gp_hero_button_title', true); ?></a>
+            <?php echo get_post_meta($post->ID, '_gp4_hero_subtitle', true); ?>
+            <?php if (get_post_meta($post->ID, '_gp4_hero_button_url', true)) { ?>
+              <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID, '_gp4_hero_button_url', true); ?>"><?php echo get_post_meta($post->ID, '_gp4_hero_button_title', true); ?></a>
             <?php } ?>
           </span>
         </p>
