@@ -11,6 +11,8 @@ Please visit the [issues](https://github.com/gangplank/gangplank-theme/issues) p
 Discussion
 ----------
 
+Please visit our [Basecamp](https://gangplank.basecamphq.com/projects/11071561-gangplank-website/log) site to help out. Contact jade at gangplankhq.com for access.
+
 You can join us on [Flowdock](https://integrum.flowdock.com/invitations/6525d90a026d03425b8ebbf3cc3e0477a02c125b-gp-website) for ongoing discussion on improving the Gangplank web experience.
 
 Open Commit Bit
