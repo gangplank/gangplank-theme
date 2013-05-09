@@ -113,4 +113,5 @@ function gp4_save_postdata( $post_id ) {
   update_post_meta($post_ID, '_gp4_hero_subtitle', $gp4_hero_subtitle);
   update_post_meta($post_ID, '_gp4_hero_button_url', $gp4_hero_button_url);
   update_post_meta($post_ID, '_gp4_hero_button_title', $gp4_hero_button_title);
+  update_post_meta($post_ID, '_gp4_slogan', $gp4_slogan);
 }
