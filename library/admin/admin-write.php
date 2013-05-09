@@ -27,7 +27,7 @@ function gp4_add_custom_boxes() {
             'gp4_hero_custom_box',
             $screen
         );
-        add_meta_box( 
+        add_meta_box(
           'gp4_slogan_box',
           __( 'Slogan' ),
           'gp4_slogan_custom_box',
@@ -84,7 +84,7 @@ function gp4_slogan_custom_box( $post ) {
 /* When the post is saved, saves our custom data */
 function gp4_save_postdata( $post_id ) {
 
-  // First we need to check if the current user is authorised to do this action. 
+  // First we need to check if the current user is authorised to do this action.
   if ( 'page' == $_POST['post_type'] ) {
     if ( ! current_user_can( 'edit_page', $post_id ) )
         return;
@@ -108,17 +108,9 @@ function gp4_save_postdata( $post_id ) {
   $gp4_hero_button_title = sanitize_text_field( $_POST['_gp4_hero_button_title'] );
   $gp4_slogan = sanitize_text_field( $_POST['_gp4_slogan'] );
 
-  // Do something with $mydata 
-  // either using 
-  add_post_meta($post_ID, '_gp4_hero_title', $gp4_hero_title, true) or
-    update_post_meta($post_ID, '_gp4_hero_title', $gp4_hero_title);
-  add_post_meta($post_ID, '_gp4_hero_subtitle', $gp4_hero_subtitle, true) or
-    update_post_meta($post_ID, '_gp4_hero_subtitle', $gp4_hero_subtitle);
-  add_post_meta($post_ID, '_gp4_hero_button_url', $gp4_hero_button_url, true) or
-    update_post_meta($post_ID, '_gp4_hero_button_url', $gp4_hero_button_url);
-  add_post_meta($post_ID, '_gp4_hero_button_title', $gp4_hero_button_title, true) or
-    update_post_meta($post_ID, '_gp4_hero_button_title', $gp4_hero_button_title);
-  add_post_meta($post_ID, '_gp4_slogan', $gp4_slogan, true) or
-    update_post_meta($post_ID, '_gp4_slogan', $gp4_slogan);
-  // or a custom table (see Further Reading section below)
+  // Add the different post meta fields to the post
+  update_post_meta($post_ID, '_gp4_hero_title', $gp4_hero_title);
+  update_post_meta($post_ID, '_gp4_hero_subtitle', $gp4_hero_subtitle);
+  update_post_meta($post_ID, '_gp4_hero_button_url', $gp4_hero_button_url);
+  update_post_meta($post_ID, '_gp4_hero_button_title', $gp4_hero_button_title);
 }
