@@ -9,7 +9,7 @@
  */
 ?>
 
-<div class="row-fluid">
+<!-- <div class="row-fluid">
   <div class="span12 well">
     <div class="row-fluid">
       <div class="span8">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 <footer class="footer">
   <div class="row-fluid">
