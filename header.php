@@ -72,6 +72,10 @@
     </div>
   </header>
 
+  <div class="alert">
+    <strong>What's up with the website?</strong> We're being dangerous. <a href="http://gangplankhq.com/2013/05/new-website-coming-real-soon/">Read More</a>
+  </div>
+
   <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
   <div class="row-fluid">
     <div class="span12">
