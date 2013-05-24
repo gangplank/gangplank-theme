@@ -53,7 +53,7 @@ function gp4_hero_custom_box( $post ) {
   echo '<label for="_gp4_hero_subtitle">';
        _e("Subtitle", 'gp4' );
   echo '</label> ';
-  echo '<input type="text" id="_gp4_hero_subtitle" name="_gp4_hero_subtitle" value="'.esc_attr($value).'" size="25" /><br/>';
+  echo '<input type="text" id="_gp4_hero_subtitle" name="_gp4_hero_subtitle" value="'.esc_attr($value).'" size="42" /><br/>';
   $value = get_post_meta( $post->ID, '_gp4_hero_button_url', true );
   echo '<label for="_gp4_hero_button_url">';
        _e("Button URL", 'gp4' );
