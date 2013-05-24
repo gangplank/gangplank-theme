@@ -61,9 +61,11 @@
   </div>
 </div>
 <div class="container-fluid">
+  <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
   <div class="alert">
-    <strong>What's up with the website?</strong> We're being dangerous. <a href="/new-website-coming-real-soon/">Read More</a>
+    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
   </div>
+  <?php } ?>
   
   <header class="header">
     <div class="row-fluid">
