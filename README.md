@@ -39,6 +39,12 @@ First; import the pages and posts from the Gangplank public site (ask Jade or Da
 				* Posts page = Blog
 		* Permalinks
 			* Common Settings = Post name
+	* Appearance
+		* Menus
+			* Main Menu / Primary Menu = Home Menu
+			* Footer Col 1 = Bottom Links
+			* Footer Col 2 = Initiatives
+			* Footer Col 3 = Locations
 
 Kudos
 ------
