@@ -31,7 +31,7 @@
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Links</li>
-        <?
+        <?php
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
@@ -46,7 +46,7 @@
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Initiatives</li>
-          <?
+          <?php
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
@@ -61,7 +61,7 @@
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Locations<li>
-          <?
+          <?php
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
