@@ -1,7 +1,9 @@
 gangplank-theme
 ===============
 
-Gangplank Wordpress Theme
+Gangplank Wordpress Theme.
+
+A child theme of _straps by VUURR, currently working from the development branch of _straps.
 
 Issues
 ------
