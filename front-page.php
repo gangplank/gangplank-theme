@@ -7,52 +7,6 @@
  */
 
 get_header(); ?>
-    <div class="row-fluid">
-      <div class="span4 well">
-        <h2 class="text-center">The Movement</h2>
-        <p class="movement">
-          Lorem ipsum dolor sit amet, <a href="">Philosophy</a> consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo <a href="">Manifesto</a>
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non <a href="">Values</a>
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
-
-      <div class="span4 well">
-        <h2 class="text-center">The Place</h2>
-        <p class="movement">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <p class="text-center">
-          <a href="" class="btn btn-danger">Start One!</a>
-        </p>
-      </div>
-
-      <div class="span4 well">
-        <h2 class="text-center">Participate</h2>
-        <p class="movement">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-        </p>
-        <ul class="nav nav-list">
-          <li><a href="">Studios</a></li>
-          <li><a href="">Junior</a></li>
-          <li><a href="">Local</a></li>
-          <li><a href="">Labs</a></li>
-        </ul>
-        <p class="text-center">
-          <a class="btn btn-info">Get Involved!</a>
-        </p>
-      </div>
-    </div>
 
   <?php while ( have_posts() ) : the_post(); ?>
     <?php get_template_part( 'content', 'page' ); ?>
