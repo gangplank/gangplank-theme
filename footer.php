@@ -31,45 +31,45 @@
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Links</li>
-        <?
+          <?php if (has_nav_menu( 'footer_col_1' )) {
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
             $args['items_wrap'] = '%3$s';
             $args['theme_location'] = 'footer_col_1';
             $args['walker'] = new menu_walker();
-            wp_nav_menu($args)
-          ?>
+            wp_nav_menu($args);
+          } ?>
       </ul>
     </div>
 
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Initiatives</li>
-          <?
+          <?php if (has_nav_menu( 'footer_col_2' )) {
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
             $args['items_wrap'] = '%3$s';
             $args['theme_location'] = 'footer_col_2';
             $args['walker'] = new menu_walker();
-            wp_nav_menu($args)
-          ?>
+            wp_nav_menu($args);
+          } ?>
       </ul>
     </div>
 
     <div class="span4">
       <ul class="nav nav-list">
         <li class="nav-header">Locations<li>
-          <?
+          <?php if (has_nav_menu( 'footer_col_3' )) {
             $args['container'] = '';
             $args['container_class'] = '';
             $args['menu_class'] = 'footer-menu';
             $args['items_wrap'] = '%3$s';
             $args['theme_location'] = 'footer_col_3';
             $args['walker'] = new menu_walker();
-            wp_nav_menu($args)
-          ?>
+            wp_nav_menu($args);
+          } ?>
       </ul>
     </div>
 
@@ -84,12 +84,11 @@
 
 <style type="text/css">
   .hero-unit.featured {
-    background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); echo $thumb[0] ?>);
-    background-size: 1326px 314px;
+    background: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); echo $thumb[0] ?>) center -100px;
     <?php if ($thumb) { echo "color: #fff;"; } ?>
+    background-size: 100% auto;
   }
 </style>
-
 
 </body>
 </html>

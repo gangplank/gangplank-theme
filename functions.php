@@ -7,6 +7,7 @@
  */
 
 include 'library/admin/admin-write.php';
+include 'library/admin/admin-theme-settings.php';
 
 
 if ( ! function_exists( 'gp4_setup' ) ) :

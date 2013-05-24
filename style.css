@@ -68,6 +68,7 @@ body > .navbar .brand:hover {
 .hero-unit.featured {
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-size: 100% auto;
 }
 
 .hero-unit.featured .promo {
@@ -75,6 +76,7 @@ body > .navbar .brand:hover {
   max-width: 50%;
   font-size: 1.1em;
   padding-bottom: 10px;
+  min-width: 500px;
 }
 
 .header .logo {
@@ -162,3 +164,6 @@ body > .navbar .brand:hover {
   font-size: 1.3em;
 }
 
+article {
+  font-size: 1.2em;
+}

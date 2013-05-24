@@ -33,10 +33,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#">Gangplank</a>
+      <a class="brand" href="/">Gangplank</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-        <?
+          <?php if (has_nav_menu( 'primary' )) {
             $args['theme_location'] = 'primary';
             $args['container'] = '';
             $args['container_class'] = '';
@@ -44,7 +44,7 @@
             $args['items_wrap'] = '%3$s';
             $args['walker'] = new menu_walker();
             wp_nav_menu($args);
-          ?>
+          } ?>
           <li class="dropdown">
             <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
@@ -61,9 +61,11 @@
   </div>
 </div>
 <div class="container-fluid">
+  <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
   <div class="alert">
-    <strong>What's up with the website?</strong> We're being dangerous. <a href="http://gangplankhq.com/2013/05/new-website-coming-real-soon/">Read More</a>
+    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
   </div>
+  <?php } ?>
   
   <header class="header">
     <div class="row-fluid">
@@ -93,3 +95,55 @@
     </div>
   </div>
   <?php } ?>
+  <?php 
+    if ( is_front_page() ) { ?>
+      <div class="row-fluid">
+        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
+          <div class="span4 well">
+            <h2 class="text-center">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
+            </h2>
+            <p class="movement">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_content', true); ?>
+            </p>
+            <?php if (get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true)) { ?>
+              <p class="text-center">
+                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
+              </p>
+            <?php } ?>
+          </div>
+        <?php } ?>
+
+        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
+          <div class="span4 well">
+            <h2 class="text-center">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
+            </h2>
+            <p class="movement">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_content', true); ?>
+            </p>
+            <?php if (get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true)) { ?>
+              <p class="text-center">
+                <a target="_blank" class="btn btn-danger" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
+              </p>
+            <?php } ?>
+          </div>
+        <?php } ?>
+
+        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
+          <div class="span4 well">
+            <h2 class="text-center">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
+            </h2>
+            <p class="movement">
+              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_content', true); ?>
+            </p>
+            <?php if (get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true)) { ?>
+              <p class="text-center">
+                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
+              </p>
+            <?php } ?>
+          </div>
+        <?php } ?>
+    </div>
+<?php } ?>
