@@ -68,6 +68,7 @@ body > .navbar .brand:hover {
 .hero-unit.featured {
   background-repeat: no-repeat;
   background-position: right bottom;
+  background-size: 100% auto;
 }
 
 .hero-unit.featured .promo {
