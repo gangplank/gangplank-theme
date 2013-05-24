@@ -36,7 +36,7 @@
       <a class="brand" href="/">Gangplank</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
-        <?
+          <?php if (has_nav_menu( 'primary' )) {
             $args['theme_location'] = 'primary';
             $args['container'] = '';
             $args['container_class'] = '';
@@ -44,7 +44,7 @@
             $args['items_wrap'] = '%3$s';
             $args['walker'] = new menu_walker();
             wp_nav_menu($args);
-          ?>
+          } ?>
           <li class="dropdown">
             <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
