@@ -22,16 +22,16 @@ function gp4_add_custom_boxes() {
     $screens = array( 'post', 'page' );
     foreach ($screens as $screen) {
         add_meta_box(
-            'gp4_hero_box',
-            __( 'Hero', 'gp4' ),
-            'gp4_hero_custom_box',
-            $screen
-        );
-        add_meta_box(
           'gp4_slogan_box',
           __( 'Slogan' ),
           'gp4_slogan_custom_box',
           $screen
+        );
+        add_meta_box(
+            'gp4_hero_box',
+            __( 'Hero', 'gp4' ),
+            'gp4_hero_custom_box',
+            $screen
         );
     }
 }
