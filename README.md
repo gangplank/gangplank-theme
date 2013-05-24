@@ -32,25 +32,25 @@ If you are setting up this theme on your own WordPress this information should h
 
 First; import the pages and posts from the Gangplank public site (ask Jade or David etc. for the XML export file). Make sure when you import that you enable the option to import attached files, you may get a few warnings...
 
-	* Settings
-		* General
-			* Site Title = Gangplank
-			* Tagline = A Collaborative coworking and event space.
-			* Timezone = Phoenix
-			* Date Format = Custom: F jS Y
-			* Time Format = Custom: H:i
-		* Reading
-			* Front page displays = A static page
-				* Front page = Home
-				* Posts page = Blog
-		* Permalinks
-			* Common Settings = Post name
-	* Appearance
-		* Menus
-			* Main Menu / Primary Menu = Home Menu
-			* Footer Col 1 = Bottom Links
-			* Footer Col 2 = Initiatives
-			* Footer Col 3 = Locations
+* Settings
+	* General
+		* Site Title = Gangplank
+		* Tagline = A Collaborative coworking and event space.
+		* Timezone = Phoenix
+		* Date Format = Custom: F jS Y
+		* Time Format = Custom: H:i
+	* Reading
+		* Front page displays = A static page
+			* Front page = Home
+			* Posts page = Blog
+	* Permalinks
+		* Common Settings = Post name
+* Appearance
+	* Menus
+		* Main Menu / Primary Menu = Home Menu
+		* Footer Col 1 = Bottom Links
+		* Footer Col 2 = Initiatives
+		* Footer Col 3 = Locations
 
 Kudos
 ------
