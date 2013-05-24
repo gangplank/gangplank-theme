@@ -33,7 +33,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="#">Gangplank</a>
+      <a class="brand" href="/">Gangplank</a>
       <div class="nav-collapse collapse">
         <ul class="nav">
         <?
@@ -62,7 +62,7 @@
 </div>
 <div class="container-fluid">
   <div class="alert">
-    <strong>What's up with the website?</strong> We're being dangerous. <a href="http://gangplankhq.com/2013/05/new-website-coming-real-soon/">Read More</a>
+    <strong>What's up with the website?</strong> We're being dangerous. <a href="/new-website-coming-real-soon/">Read More</a>
   </div>
   
   <header class="header">
