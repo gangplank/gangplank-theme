@@ -50,7 +50,7 @@
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
               <li role="presentation"><a role="menuitem" tabindex="-1" href="http://avondale.gangplankhq.com">Avondale, Arizona</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="http://chandler.gangplankhq.com">Chandler, Arizona</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://richmond.gangplankhq.com">Richmond, Virginia</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://rva.gangplankhq.com">Richmond, Virginia</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="http://sault.gangplankhq.com">Sault Ste. Marie, Ontario</a></li>
               <li role="presentation"><a role="menuitem" tabindex="-1" href="http://tucson.gangplankhq.com">Tucson, Arizona</a></li>
             </ul>
