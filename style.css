@@ -76,6 +76,7 @@ body > .navbar .brand:hover {
   max-width: 50%;
   font-size: 1.1em;
   padding-bottom: 10px;
+  min-width: 500px;
 }
 
 .header .logo {
