@@ -84,8 +84,9 @@
 
 <style type="text/css">
   .hero-unit.featured {
-    background-image: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); echo $thumb[0] ?>);
+    background: url(<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id(), 'full'); echo $thumb[0] ?>) center -100px;
     <?php if ($thumb) { echo "color: #fff;"; } ?>
+    background-size: 100% auto;
   }
 </style>
 
