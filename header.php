@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar navbar-inverse navbar-static-top">
   <div class="navbar-inner">
     <div class="container">
       <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -99,7 +99,7 @@
     if ( is_front_page() ) { ?>
       <div class="row-fluid">
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
-          <div class="span4 well">
+          <div class="span4 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
             </h2>
@@ -115,7 +115,7 @@
         <?php } ?>
 
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
-          <div class="span4 well">
+          <div class="span4 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
             </h2>
@@ -131,7 +131,7 @@
         <?php } ?>
 
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
-          <div class="span4 well">
+          <div class="span4 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
             </h2>
