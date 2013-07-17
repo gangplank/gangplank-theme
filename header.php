@@ -60,13 +60,7 @@
     </div>
   </div>
 </div>
-<div class="container-fluid">
-  <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
-  <div class="alert">
-    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
-  </div>
-  <?php } ?>
-  
+<div class="container-fluid">  
   <header class="header">
     <div class="row-fluid">
       <div class="logo span4">
@@ -77,6 +71,12 @@
       </div>
     </div>
   </header>
+
+  <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
+  <div class="alert">
+    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
+  </div>
+  <?php } ?>
 
   <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
   <div class="row-fluid">
