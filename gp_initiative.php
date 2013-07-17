@@ -16,12 +16,7 @@ get_header(); ?>
       <div class="span12">
         <div class="well">
           <h3>Get Involved!</h3>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Doing over Saying.  The best way to make a difference is to get involved.  Get connected and let someone know that you want to make a difference.  Be the change you want to see in the world.  Be dangerous and <a href="http://gangplankhq.com/get-involved">Walk the Plank</a>.
         </div>
       </div>
     </div>
