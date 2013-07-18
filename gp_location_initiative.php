@@ -26,89 +26,21 @@ get_header(); ?>
       </div>
     </div>
 
-<!--
-    <h2>The People</h2>
-    <div class="row-fluid">
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/c9ddd25b4e0d82d7869734a4b944e567">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Jade Meskill</h4>
-            Co-Founder, Gangplank Collective
-          </div>
-        </div>
-      </div>
+    <hr/>
 
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/631306e06de9205d62da57cc27bbcc04">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Derek Neighbors</h4>
-            Co-Founder, Gangplank Collective
-          </div>
-        </div>
-      </div>
+    <h2>Recent Posts</h2>
+    <?php 
+      $categories = array_map(
+        function($value) { return $value->cat_ID; }, 
+        get_the_category( $post->ID )
+      );
+      $wp_query = new WP_Query();
+      $wp_query->query(array('category__and' => $categories, 'posts_per_page' => 3));
+    ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+      <?php get_template_part( 'content', 'summary' ); ?>
+    <?php endwhile; // end of the loop. ?>
 
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/e480aa127b3548eabf4888d48154fcfd">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Trish Gillam</h4>
-            Executive Director, Gangplank Collective
-          </div>
-        </div>
-      </div>
-    </div>
-        <div class="row-fluid">
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/c9ddd25b4e0d82d7869734a4b944e567">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Jade Meskill</h4>
-            Co-Founder, Gangplank Collective
-          </div>
-        </div>
-      </div>
-
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/631306e06de9205d62da57cc27bbcc04">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Derek Neighbors</h4>
-            Co-Founder, Gangplank Collective
-          </div>
-        </div>
-      </div>
-
-      <div class="span3 offset1">
-        <div class="media">
-          <a class="pull-left" href="#">
-            <img class="media-object" data-src="holder.js/64x64" src="http://www.gravatar.com/avatar/e480aa127b3548eabf4888d48154fcfd">
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading">Trish Gillam</h4>
-            Executive Director, Gangplank Collective
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span12">
-        <br/>
-        <a href="" class="pull-right">More Gangplankers...</a>
-      </div>
-    </div>
--->
     <hr/>
 
     <h2>Upcoming Events</h2>
