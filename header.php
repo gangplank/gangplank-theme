@@ -48,11 +48,15 @@
           <li class="dropdown">
             <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://avondale.gangplankhq.com">Avondale, Arizona</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://chandler.gangplankhq.com">Chandler, Arizona</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://rva.gangplankhq.com">Richmond, Virginia</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://sault.gangplankhq.com">Sault Ste. Marie, Ontario</a></li>
-              <li role="presentation"><a role="menuitem" tabindex="-1" href="http://tucson.gangplankhq.com">Tucson, Arizona</a></li>
+              <?php if (has_nav_menu( 'footer_col_3' )) {
+                $args['container'] = '';
+                $args['container_class'] = '';
+                $args['menu_class'] = 'footer-menu';
+                $args['items_wrap'] = '%3$s';
+                $args['theme_location'] = 'footer_col_3';
+                $args['walker'] = new menu_walker();
+                wp_nav_menu($args);
+              } ?>
             </ul>
           </li>
         </ul>
