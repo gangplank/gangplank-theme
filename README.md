@@ -30,7 +30,15 @@ This project has an open commit bit policy: Anyone with an accepted pull request
 
 If you are setting up this theme on your own WordPress this information should help:
 
-First; import the pages and posts from the Gangplank public site (ask Jade or David etc. for the XML export file). Make sure when you import that you enable the option to import attached files, you may get a few warnings...
+First: Install the _straps theme in your theme directory using the development branch
+git clone -b development git@github.com:vuurr/_straps.git _straps
+
+Second: Install the gangplank theme in your theme directory
+git clone git@github.com:gangplank/gangplank-theme.git gangplank-theme
+
+Third; import the pages and posts from the Gangplank public site (ask Jade or David etc. for the XML export file). Make sure when you import that you enable the option to import attached files, you may get a few warnings...
+
+Fourth: In the dashboard menu set the following settings
 
 * Settings
 	* General
