@@ -50,7 +50,7 @@ add_action('wp_print_styles', 'webfont_rokkitt');
  * Custom Excerpt Filters
 */
 function custom_excerpt_length( $length ) {
-	return 20;
+	return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
