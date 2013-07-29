@@ -28,7 +28,7 @@
 
 
 	<div class="container-fluid">  
-	  <header class="header">
+	  <header class="header" style="display: inline;">
 	    <div class="row-fluid">
 	      <div class="logo span4" style="margin-top: 0px; padding-top: 0px;">
 	        &nbsp;
