@@ -44,3 +44,79 @@
 			</div>
     </div>
 	</div>
+	
+	  <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
+	  <div class="alert">
+	    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
+	  </div>
+	  <?php } ?>
+
+	  <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
+	  <div class="row-fluid">
+	    <div class="span12">
+	      <div class="hero-unit featured">
+	        <h1><?php echo get_post_meta($post->ID, '_gp4_hero_title', true); ?></h1>
+	        <p>
+	          <span class="promo">
+	            <?php echo get_post_meta($post->ID, '_gp4_hero_subtitle', true); ?>
+	            <?php if (get_post_meta($post->ID, '_gp4_hero_button_url', true)) { ?>
+	              <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID, '_gp4_hero_button_url', true); ?>"><?php echo get_post_meta($post->ID, '_gp4_hero_button_title', true); ?></a>
+	            <?php } ?>
+	          </span>
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	  <?php } ?>
+	  <?php 
+	    if ( is_front_page() ) { ?>
+	      <div class="row-fluid">
+	        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
+	          <div class="span4 well well-featurette">
+	            <h2 class="text-center">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
+	            </h2>
+	            <p class="movement">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_content', true); ?>
+	            </p>
+	            <?php if (get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true)) { ?>
+	              <p class="text-center">
+	                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
+	              </p>
+	            <?php } ?>
+	          </div>
+	        <?php } ?>
+
+	        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
+	          <div class="span4 well well-featurette">
+	            <h2 class="text-center">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
+	            </h2>
+	            <p class="movement">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_content', true); ?>
+	            </p>
+	            <?php if (get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true)) { ?>
+	              <p class="text-center">
+	                <a target="_blank" class="btn btn-danger" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
+	              </p>
+	            <?php } ?>
+	          </div>
+	        <?php } ?>
+
+	        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
+	          <div class="span4 well well-featurette">
+	            <h2 class="text-center">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
+	            </h2>
+	            <p class="movement">
+	              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_content', true); ?>
+	            </p>
+	            <?php if (get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true)) { ?>
+	              <p class="text-center">
+	                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
+	              </p>
+	            <?php } ?>
+	          </div>
+	        <?php } ?>
+	    </div>
+	<?php } ?>
