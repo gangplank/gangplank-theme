@@ -89,9 +89,5 @@ get_header(); ?>
       </div>
     </div>
 
-    <hr/>
-
-    
-    <hr/>
 
 <?php get_footer(); ?>
