@@ -39,11 +39,6 @@
 	    </div>
 	  </header>
     <div class="row-fluid">
-			<div class="span12 offset2 lead">
-				<?php echo get_the_title(); ?> 
-			</div>
-    </div>
-    <div class="row-fluid">
 			<div class="span12">
 			  <?php while ( have_posts() ) : the_post(); ?>
 			    <?php get_template_part( 'content', 'page' ); ?>
