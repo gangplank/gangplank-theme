@@ -30,14 +30,14 @@ get_header(); ?>
 		      $categories = get_the_category( $post->ID );
 		      $category_ids = array_map(
 		        function($value) { return $value->cat_ID; },
-	          $categories
+			  $categories
 		      );
-	        $category_names = array_map(
-	          function($value) { return $value->name; },
-	          $categories
-	        );
+		      $category_names = array_map(
+			  function($value) { return $value->name; },
+			  $categories
+		      );
 		      $wp_query = new WP_Query();
-		      $wp_query->query(array('category__in' => $categories, 'posts_per_page' => 3));
+		      $wp_query->query(array('category__in' => $category_ids, 'posts_per_page' => 3));
 		    ?>
 		    <?php while ( have_posts() ) : the_post(); ?>
 		      <?php get_template_part( 'content', 'summary' ); ?>
