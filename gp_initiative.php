@@ -27,10 +27,15 @@ get_header(); ?>
 				<div class="well">
 		    <h3>Recent Posts</h3>
 		    <?php 
-		      $categories = array_map(
-		        function($value) { return $value->cat_ID; }, 
-		        get_the_category( $post->ID )
+		      $categories = get_the_category( $post->ID );
+		      $category_ids = array_map(
+		        function($value) { return $value->cat_ID; },
+	          $categories
 		      );
+	        $category_names = array_map(
+	          function($value) { return $value->name; },
+	          $categories
+	        );
 		      $wp_query = new WP_Query();
 		      $wp_query->query(array('category__in' => $categories, 'posts_per_page' => 3));
 		    ?>
@@ -39,53 +44,25 @@ get_header(); ?>
 		    <?php endwhile; // end of the loop. ?>
 				</div>
 				
-		    <hr/>
-
-		    <h3>Upcoming Events</h3>
-		    <div class="row-fluid event">
-		      <div class="span1 date"><a href="">April 4</a></div>
-		      <div class="span2"><a href="">Chandler</a> &raquo; <a href="">Magic Space</a></div>
-		      <div class="span9"><a href="">Some Random Event</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      consequat.
+		    <div class="well">
+		      <h3>Upcoming Events</h3>
+		      <?php
+		        $em_categories = new EM_Categories();
+		        $em_category_ids = array();
+		        foreach ($em_categories->get() as $em_category) {
+		          if (in_array($em_category->name, $category_names)) {
+		            $em_category_ids[] = $em_category->id;
+		          }
+		        }
+		      ?>
+		      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row-fluid event"><div class="span4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="span8">#_EVENTLINK<br/>@ #_LOCATIONLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
+		      <div class="row-fluid">
+		        <div class="span12">
+		          <br/>
+		          <a href="" class="pull-right">More Events...</a>
+		        </div>
 		      </div>
 		    </div>
-		    <div class="row-fluid event">
-		      <div class="span1 date"><a href="">April 4</a></div>
-		      <div class="span2"><a href="">Avondale</a> &raquo; <a href="">Magic Space</a></div>
-		      <div class="span9"><a href="">Some Random Event</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      consequat.
-		      </div>
-		    </div>
-		    <div class="row-fluid event">
-		      <div class="span1 date"><a href="">April 4</a></div>
-		      <div class="span2"><a href="">Chandler</a> &raquo; <a href="">Magic Space</a></div>
-		      <div class="span9"><a href="">Some Random Event</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      consequat.
-		      </div>
-		    </div>
-		    <div class="row-fluid event">
-		      <div class="span1 date"><a href="">April 4</a></div>
-		      <div class="span2"><a href="">Chandler</a> &raquo; <a href="">Magic Space</a></div>
-		      <div class="span9"><a href="">Some Random Event</a> - Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-		      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-		      consequat.
-		      </div>
-		    </div>
-		    <div class="row-fluid">
-		      <div class="span12">
-		        <br/>
-		        <a href="" class="pull-right">More Events...</a>
-		      </div>
-		    </div>
-
-
       </div>
     </div>
 
