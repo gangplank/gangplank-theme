@@ -196,3 +196,13 @@ header .entry-meta {
 article.side-bar {
 	margin-bottom: 25px;
 }
+
+p.wp-caption-text {
+	font-size: 10px;
+}
+
+div.wp-caption {
+	text-align:center;
+	background-color: #F5F5F5;
+	padding-top: 5px;
+}
