@@ -11,7 +11,6 @@
 get_header(); ?>
 <div class="row-fluid">
 	<div class="span12">
-
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
