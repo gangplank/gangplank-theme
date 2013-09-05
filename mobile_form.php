@@ -6,7 +6,6 @@
  */
 
 ?>
-
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -24,27 +23,22 @@
 </head>
 
 <body <?php body_class(); ?>>
-
-
-
 	<div class="container-fluid">  
-	  <header class="header" style="display: inline;">
-	    <div class="row-fluid">
-	      <div class="logo span4" style="margin-top: 0px; padding-top: 0px;">
-	        &nbsp;
-	      </div>
-	      <div class="span8">
-	        <h1 class="slogan pull-right"><?php echo get_post_meta($post->ID, '_gp4_slogan', true); ?></h1>
-	      </div>
-	    </div>
-	  </header>
-    <div class="row-fluid">
-			<div class="span12">
-			  <?php while ( have_posts() ) : the_post(); ?>
-			    <?php get_template_part( 'content', 'page' ); ?>
-			  <?php endwhile; // end of the loop. ?>
+		<header class="header">
+			<div class="row-fluid">
+				<div class="logo span4" style="margin-top: 0px; padding-top: 0px;">
+					&nbsp;
+				</div>
 			</div>
-    </div>
+		</header>
+		<div class="row-fluid">
+			<div class="span12">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', 'page' ); ?>
+				<?php endwhile; // end of the loop. ?>
+			</div>
+		</div>
 	</div>
-	
-	
+</body>
+
+</html>
