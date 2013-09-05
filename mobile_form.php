@@ -21,6 +21,12 @@
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/normalize.min.css">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/foundation.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
+
+<script>
+window.onload = function() {
+  document.getElementById("input_20_1").focus();
+}
+</script>
 </head>
 
 <body <?php body_class(); ?>>
