@@ -63,7 +63,7 @@ Fourth: In the dashboard menu set the following settings
 Kudos
 ------
 
-Thanks to the good peeps at [VUURR](http://vuurr.com) for their [_straps](https://github.com/VUURR/_straps) theme.
+Thanks to the good peeps at [Vuurr](http://vuurr.com) for their [_straps](https://github.com/VUURR/_straps) theme.
 
 Contributors
 ------------
