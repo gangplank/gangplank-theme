@@ -206,3 +206,7 @@ div.wp-caption {
 	background-color: #F5F5F5;
 	padding-top: 5px;
 }
+
+.page-template-mobile_form-php .gform_description {
+  margin:32pt;
+}
