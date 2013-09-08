@@ -78,7 +78,7 @@
   </header>
 
   <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
-  <div class="alert">
+  <div class="alert alert-warning">
     <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
   </div>
   <?php } ?>

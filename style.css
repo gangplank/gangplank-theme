@@ -62,6 +62,9 @@ article p {
   padding-bottom: 10px;
   min-width: 500px;
 }
+.header {
+  padding-bottom: 10px;
+}
 .header .logo {
   height: 60px;
   background: url('img/logo.png') left bottom no-repeat;
