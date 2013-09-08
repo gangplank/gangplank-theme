@@ -29,7 +29,7 @@
 <footer class="footer">
   <div class="row">
     <div class="col-lg-4">
-      <ul class="nav nav-list">
+      <ul class="nav">
         <li class="nav-header">Links</li>
           <?php if (has_nav_menu( 'footer_col_1' )) {
             $args['container'] = '';
@@ -44,7 +44,7 @@
     </div>
 
     <div class="col-lg-4">
-      <ul class="nav nav-list">
+      <ul class="nav">
         <li class="nav-header">Initiatives</li>
           <?php if (has_nav_menu( 'footer_col_2' )) {
             $args['container'] = '';
@@ -59,7 +59,7 @@
     </div>
 
     <div class="col-lg-4">
-      <ul class="nav nav-list">
+      <ul class="nav">
         <li class="nav-header">Locations<li>
           <?php if (has_nav_menu( 'footer_col_3' )) {
             $args['container'] = '';

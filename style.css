@@ -95,6 +95,10 @@ article p {
   color: #777;
 }
 
+.footer .nav li a {
+  padding: 0px;
+}
+
 header .entry-meta {
 	font-size: 12px;
 	margin: 0px 0px 25px 0px;
