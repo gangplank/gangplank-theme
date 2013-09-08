@@ -41,9 +41,9 @@ get_header(); ?>
           }
         }
       ?>
-      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row-fluid event"><div class="span4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="span8">#_EVENTLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
-      <div class="row-fluid">
-        <div class="span12">
+      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row event"><div class="col-lg-4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="col-lg-8">#_EVENTLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
+      <div class="row">
+        <div class="col-lg-12">
           <br/>
           <a href="" class="pull-right">More Events...</a>
         </div>

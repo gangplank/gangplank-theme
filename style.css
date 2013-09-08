@@ -5,7 +5,7 @@ Description:    Gangplank Theme 4.0
 Author:         gangplank
 Author URI:     http://gangplankhq.com/about/
 Template:       _straps
-Version:        0.1.1
+Version:        2.0.0
 */
 
 /*************************************************************
@@ -17,12 +17,11 @@ Version:        0.1.1
 /*------------------------------------------------------------------
 [ Typography ]
 */
-body,
-html {
+body {
     font-size: 18px;
-    padding-top: 0;
+    padding-top: 70px;
 }
-h1 {
+/*h1 {
   font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: -1px;
@@ -30,7 +29,7 @@ h1 {
 h2 {
   font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.event > .date {
+*/.event > .date {
   font-size: .875em;
 }
 article {
@@ -45,51 +44,18 @@ article p {
 /*------------------------------------------------------------------
 [ Layout/Navigation ]
 */
-.navbar-inverse .navbar-inner {
-  background-color: #000;
-  background-image: none;
-  border-color: #000;
-}
-body > .navbar .brand {
-  padding-right: 0;
-  padding-left: 0;
-  margin-left: 20px;
-  float: right;
-  font-weight: bold;
-  color: #686868;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-          transition: all .2s linear;
-}
-body > .navbar .brand:hover {
-  text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.4);
-}
-@media (max-width: 980px) { /* Unfloat brand */
-  body > .navbar-fixed-top .brand {
-    float: left;
-    margin-left: 0;
-    color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-shadow: none;
-  }
-}
+
 
 
 /*------------------------------------------------------------------
 [ Layout/Masthead ]
 */
-.header {
-  padding: 10px 0;
-}
-.hero-unit.featured {
+.jumbotron.featured {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-size: 100% auto;
 }
-.hero-unit.featured .promo {
+.jumbotron.featured .promo {
   display: block;
   max-width: 50%;
   font-size: 1.1em;
@@ -97,21 +63,18 @@ body > .navbar .brand:hover {
   min-width: 500px;
 }
 .header .logo {
-  margin-top: 20px;
   height: 60px;
-  margin-left: 20px;
   background: url('img/logo.png') left bottom no-repeat;
 }
 .slogan {
-  margin-top: 30px;
-  font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 60px;
-  font-weight: bold;
+  height: 60px;
+  /*font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-size: 40px;
 }
 .signup {
   line-height: 24px;
   font-size: 24px;
-  font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 .well-featurette {
     min-height: 220px!important;
@@ -144,16 +107,13 @@ header .entry-meta {
   .slogan {
     font-size: 1em;
   }
-  .navbar-static-top {
-      margin-bottom: 20px!important;
-  }
 }
 @media (max-width: 767px) {
-  .hero-unit.featured {
+  .jumbotron.featured {
     background-image: none !important;
     color: inherit !important;
   }
-  .hero-unit.featured .promo {
+  .jumbotron.featured .promo {
     display: inline;
   }
   .media {
@@ -161,17 +121,12 @@ header .entry-meta {
   }
 }
 @media (max-width: 480px) {
-  .hero-unit.featured {
+  .jumbotron.featured {
     text-align: center;
   }
-  .hero-unit.featured h1 {
+  .jumbotron.featured h1 {
     font-size: 45px;
   }
-}
-@media (min-width: 979px) { /* override _straps top nav padding */
-	body {
-		padding-top: 0;
-	}
 }
 .movement > a {
   color: #000;

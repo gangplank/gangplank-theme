@@ -2,8 +2,8 @@
 /**
  * The template for displaying the front page (home).
  *
- * @package _straps
- * @since _straps 1.0
+ * @package gp4
+ * @since gp4 1.0
  */
 
 get_header(); ?>

@@ -13,8 +13,8 @@
  */
 
 get_header(); ?>
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 		<p>:( There is nothing here.</p>
 	</div>
 </div>

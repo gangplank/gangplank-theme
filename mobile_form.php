@@ -25,16 +25,16 @@
 </head>
 
 <body <?php body_class(); ?>>
-	<div class="container-fluid">  
+	<div class="container">  
 		<header class="header">
-			<div class="row-fluid">
-				<div class="logo span4" style="margin-top: 0px; padding-top: 0px;">
+			<div class="row">
+				<div class="logo col-lg-4" style="margin-top: 0px; padding-top: 0px;">
 					&nbsp;
 				</div>
 			</div>
 		</header>
-		<div class="row-fluid">
-			<div class="span12">
+		<div class="row">
+			<div class="col-lg-12">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'content', 'page' ); ?>
 				<?php endwhile; // end of the loop. ?>

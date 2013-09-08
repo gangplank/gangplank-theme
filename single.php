@@ -2,13 +2,13 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package _straps
- * @since _straps 1.0
+ * @package gp4
+ * @since gp4 1.0
  */
 
 get_header(); ?>
-<div class="row-fluid">
-	<div class="span7">
+<div class="row">
+	<div class="col-lg-7">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content', 'single' ); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 	</div>
-	<div class="span5 pull-right">
+	<div class="col-lg-5 pull-right">
 		  <p class="text-center">
 				<a href="http://gangplankhq.com/get-involved">
 					<button class="btn btn-large btn-block btn-success" type="button">Get Involved!</button>
@@ -56,9 +56,9 @@ get_header(); ?>
 	        }
 	        $em_category_ids = array(join(',', $em_category_ids), join(',', $em_neg_category_ids));
 	      ?>
-	      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row-fluid event"><div class="span4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="span8">#_EVENTLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
-	      <div class="row-fluid">
-	        <div class="span12">
+	      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row event"><div class="col-lg-4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="col-lg-8">#_EVENTLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
+	      <div class="row">
+	        <div class="col-lg-12">
 	          <br/>
 	          <a href="" class="pull-right">More Events...</a>
 	        </div>

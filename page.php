@@ -13,7 +13,7 @@
 
 get_header(); ?>
 <div class="row">
-	<div class="span12">
+	<div class="col-lg-12">
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', 'page' ); ?>
 		<?php endwhile; // end of the loop. ?>

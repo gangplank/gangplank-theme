@@ -4,13 +4,13 @@
  *
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package _straps
- * @since _straps 1.0
+ * @package gp4
+ * @since gp4 1.0
  */
 
 get_header(); ?>
-<div class="row-fluid">
-	<div class="span12">
+<div class="row">
+	<div class="col-lg-12">
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">

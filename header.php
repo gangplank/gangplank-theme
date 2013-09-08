@@ -4,9 +4,10 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package _straps
- * @since _straps 1.0
+ * @package gp4
+ * @since gp4 1.0
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -25,53 +26,53 @@
 
 <body <?php body_class(); ?>>
 
-<div class="navbar navbar-inverse navbar-static-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="brand" href="/">Gangplank</a>
-      <div class="nav-collapse collapse">
-        <ul class="nav">
-          <?php if (has_nav_menu( 'primary' )) {
-            $args['theme_location'] = 'primary';
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="/">Gangplank</a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <?php if (has_nav_menu( 'primary' )) {
+        $args['theme_location'] = 'primary';
+        $args['container'] = '';
+        $args['container_class'] = '';
+        $args['menu_class'] = 'main-menu';
+        $args['items_wrap'] = '%3$s';
+        $args['walker'] = new menu_walker();
+        wp_nav_menu($args);
+      } ?>
+      <li class="dropdown">
+        <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+          <?php if (has_nav_menu( 'footer_col_3' )) {
             $args['container'] = '';
             $args['container_class'] = '';
-            $args['menu_class'] = 'main-menu';
+            $args['menu_class'] = 'footer-menu';
             $args['items_wrap'] = '%3$s';
+            $args['theme_location'] = 'footer_col_3';
             $args['walker'] = new menu_walker();
             wp_nav_menu($args);
           } ?>
-          <li class="dropdown">
-            <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-              <?php if (has_nav_menu( 'footer_col_3' )) {
-                $args['container'] = '';
-                $args['container_class'] = '';
-                $args['menu_class'] = 'footer-menu';
-                $args['items_wrap'] = '%3$s';
-                $args['theme_location'] = 'footer_col_3';
-                $args['walker'] = new menu_walker();
-                wp_nav_menu($args);
-              } ?>
-            </ul>
-          </li>
         </ul>
-      </div><!--/.nav-collapse -->
-    </div>
-  </div>
-</div>
-<div class="container-fluid">  
+      </li>
+    </ul>
+  </div><!--/.navbar-collapse -->
+</nav>
+<div class="container">
   <header class="header">
-    <div class="row-fluid">
-      <div class="logo span4">
+    <div class="row">
+      <div class="logo col-lg-4">
         &nbsp;
       </div>
-      <div class="span8">
-        <h1 class="slogan pull-right"><?php echo get_post_meta($post->ID, '_gp4_slogan', true); ?></h1>
+      <div class="col-lg-8">
+        <span class="slogan pull-right"><?php echo get_post_meta($post->ID, '_gp4_slogan', true); ?></span>
       </div>
     </div>
   </header>
@@ -83,9 +84,9 @@
   <?php } ?>
 
   <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
-  <div class="row-fluid">
-    <div class="span12">
-      <div class="hero-unit featured">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="jumbotron featured">
         <h1><?php echo get_post_meta($post->ID, '_gp4_hero_title', true); ?></h1>
         <p>
           <span class="promo">
@@ -101,9 +102,9 @@
   <?php } ?>
   <?php 
     if ( is_front_page() ) { ?>
-      <div class="row-fluid">
+      <div class="row">
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
-          <div class="span4 well well-featurette">
+          <div class="col-lg-3 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
             </h2>
@@ -119,7 +120,7 @@
         <?php } ?>
 
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
-          <div class="span4 well well-featurette">
+          <div class="col-lg-3 col-lg-offset-1 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
             </h2>
@@ -135,7 +136,7 @@
         <?php } ?>
 
         <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
-          <div class="span4 well well-featurette">
+          <div class="col-lg-3 col-lg-offset-1 well well-featurette">
             <h2 class="text-center">
               <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
             </h2>

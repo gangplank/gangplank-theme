@@ -2,8 +2,8 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package _straps
- * @since _straps 1.0
+ * @package gp4
+ * @since gp4 1.0
  */
 ?>
 
