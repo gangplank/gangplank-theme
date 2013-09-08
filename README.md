@@ -3,7 +3,7 @@ gangplank-theme
 
 Gangplank Wordpress Theme.
 
-A child theme of _straps by VUURR, currently working from the development branch of _straps.
+A child theme of _straps by VUURR, currently working from the bootstrap3 branch [_straps](https://github.com/gangplank/_straps/tree/bootstrap3).
 
 Issues
 ------
