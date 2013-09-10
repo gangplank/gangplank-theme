@@ -47,6 +47,13 @@ function webfont_rokkitt() {
 
 add_action('wp_print_styles', 'webfont_rokkitt');
 
+function webfont_oswald() {
+  wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald:400,700');
+  wp_enqueue_style('oswald');
+  }
+
+add_action('wp_print_styles', 'webfont_oswald');
+
 /**
  * Custom Excerpt Filters
 */

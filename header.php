@@ -21,6 +21,10 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
+<!-- TypeKit -->
+<script type="text/javascript" src="//use.typekit.net/nzm0puf.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -65,7 +69,7 @@
     </ul>
   </div><!--/.navbar-collapse -->
 </nav>
-<div class="container">
+<div class="container main-body">
   <header class="header">
     <div class="row">
       <div class="logo col-lg-4">
