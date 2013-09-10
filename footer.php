@@ -26,61 +26,68 @@
   </div>
 </div> -->
 
+</div> <!-- /container -->
+
 <footer class="footer">
-  <div class="row">
-    <div class="col-lg-4">
-      <ul class="nav">
-        <li class="nav-header">Links</li>
-          <?php if (has_nav_menu( 'footer_col_1' )) {
-            $args['container'] = '';
-            $args['container_class'] = '';
-            $args['menu_class'] = 'footer-menu';
-            $args['items_wrap'] = '%3$s';
-            $args['theme_location'] = 'footer_col_1';
-            $args['walker'] = new menu_walker();
-            wp_nav_menu($args);
-          } ?>
-      </ul>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <ul class="nav">
+          <li class="nav-header">Links</li>
+            <?php if (has_nav_menu( 'footer_col_1' )) {
+              $args['container'] = '';
+              $args['container_class'] = '';
+              $args['menu_class'] = 'footer-menu';
+              $args['items_wrap'] = '%3$s';
+              $args['theme_location'] = 'footer_col_1';
+              $args['walker'] = new menu_walker();
+              wp_nav_menu($args);
+            } ?>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <ul class="nav">
+          <li class="nav-header">Initiatives</li>
+            <?php if (has_nav_menu( 'footer_col_2' )) {
+              $args['container'] = '';
+              $args['container_class'] = '';
+              $args['menu_class'] = 'footer-menu';
+              $args['items_wrap'] = '%3$s';
+              $args['theme_location'] = 'footer_col_2';
+              $args['walker'] = new menu_walker();
+              wp_nav_menu($args);
+            } ?>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <ul class="nav">
+          <li class="nav-header">Locations<li>
+            <?php if (has_nav_menu( 'footer_col_3' )) {
+              $args['container'] = '';
+              $args['container_class'] = '';
+              $args['menu_class'] = 'footer-menu';
+              $args['items_wrap'] = '%3$s';
+              $args['theme_location'] = 'footer_col_3';
+              $args['walker'] = new menu_walker();
+              wp_nav_menu($args);
+            } ?>
+        </ul>
+      </div>
+
     </div>
 
-    <div class="col-lg-4">
-      <ul class="nav">
-        <li class="nav-header">Initiatives</li>
-          <?php if (has_nav_menu( 'footer_col_2' )) {
-            $args['container'] = '';
-            $args['container_class'] = '';
-            $args['menu_class'] = 'footer-menu';
-            $args['items_wrap'] = '%3$s';
-            $args['theme_location'] = 'footer_col_2';
-            $args['walker'] = new menu_walker();
-            wp_nav_menu($args);
-          } ?>
-      </ul>
+    <div class="row">
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/img/knucklehead-white.png" height="230">
     </div>
 
-    <div class="col-lg-4">
-      <ul class="nav">
-        <li class="nav-header">Locations<li>
-          <?php if (has_nav_menu( 'footer_col_3' )) {
-            $args['container'] = '';
-            $args['container_class'] = '';
-            $args['menu_class'] = 'footer-menu';
-            $args['items_wrap'] = '%3$s';
-            $args['theme_location'] = 'footer_col_3';
-            $args['walker'] = new menu_walker();
-            wp_nav_menu($args);
-          } ?>
-      </ul>
+    <div class="row">
+      <p><small>&copy; Copyright 2013 Gangplank Collective</small></p>
     </div>
-
-  </div>
-  <div class="row">
-    <p><small>&copy; Copyright 2013 Gangplank Collective</small></p>
   </div>
 </footer>
 <?php wp_footer(); ?>
-
-</div> <!-- /container -->
 
 <style type="text/css">
   .jumbotron.featured {
