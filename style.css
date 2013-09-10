@@ -92,7 +92,9 @@ article p {
   /*font-family: "Rokkitt", "Helvetica Neue", Helvetica, Arial, sans-serif;*/
 }
 
-body {
+.center-block {
+  background-color: #ccc;
+  margin-bottom: 50px;
 }
 
 

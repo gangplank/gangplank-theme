@@ -81,77 +81,102 @@
   </header>
 
   <?php if (get_option( 'gangplank_settings_alert_enabled', false ) && get_option( 'gangplank_settings_alert_text', false )) { ?>
-  <div class="alert alert-warning">
-    <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
-  </div>
+    <div class="alert alert-warning">
+      <?php echo get_option( 'gangplank_settings_alert_text', false ); ?>
+    </div>
   <?php } ?>
 
   <?php if (get_post_meta($post->ID, '_gp4_hero_title', true)) { ?>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="jumbotron featured">
-        <h1><?php echo get_post_meta($post->ID, '_gp4_hero_title', true); ?></h1>
-        <p>
-          <span class="promo">
-            <?php echo get_post_meta($post->ID, '_gp4_hero_subtitle', true); ?>
-            <?php if (get_post_meta($post->ID, '_gp4_hero_button_url', true)) { ?>
-              <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID, '_gp4_hero_button_url', true); ?>"><?php echo get_post_meta($post->ID, '_gp4_hero_button_title', true); ?></a>
-            <?php } ?>
-          </span>
-        </p>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="jumbotron featured">
+          <h1><?php echo get_post_meta($post->ID, '_gp4_hero_title', true); ?></h1>
+          <p>
+            <span class="promo">
+              <?php echo get_post_meta($post->ID, '_gp4_hero_subtitle', true); ?>
+              <?php if (get_post_meta($post->ID, '_gp4_hero_button_url', true)) { ?>
+                <a class="btn btn-primary btn-large" href="<?php echo get_post_meta($post->ID, '_gp4_hero_button_url', true); ?>"><?php echo get_post_meta($post->ID, '_gp4_hero_button_title', true); ?></a>
+              <?php } ?>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
-  </div>
   <?php } ?>
-  <?php 
-    if ( is_front_page() ) { ?>
-      <div class="row">
-        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
-          <div class="col-lg-3 well well-featurette">
+  <?php if ( is_front_page() ) { ?>
+    </div> <!-- container -->
+    <div class="center-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
             <h2 class="text-center">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
+              <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_one_title', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_title', true); ?>
+              <?php } ?>
             </h2>
+          </div>
+          <div class="col-lg-4">
+            <h2 class="text-center">
+              <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
+              <?php } ?>
+            </h2>
+          </div>
+          <div class="col-lg-4">
+            <h2 class="text-center">
+              <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
+              <?php } ?>
+            </h2>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-lg-4">
             <p class="movement">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_content', true); ?>
+              <?php if ( get_post_meta($post->ID, '_gp4_featured_column_one_content', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_one_content', true); ?>
+              <?php } ?>
             </p>
+          </div>
+         <div class="col-lg-4">
+            <p class="movement">
+              <?php if ( get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_content', true); ?>
+              <?php } ?>
+            </p>
+          </div>
+         <div class="col-lg-4">
+            <p class="movement">
+              <?php if ( get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
+                <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_content', true); ?>
+              <?php } ?>
+            </p>
+          </div>
+        </div> <!-- row -->
+        <div class="row">
+          <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
+                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
-        <?php } ?>
-
-        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_two_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_two_content', true ) ) { ?>
-          <div class="col-lg-3 col-lg-offset-1 well well-featurette">
-            <h2 class="text-center">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_title', true); ?>
-            </h2>
-            <p class="movement">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_two_content', true); ?>
-            </p>
+          <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-danger" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
+                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
-        <?php } ?>
-
-        <?php if ( get_post_meta( $post->ID, '_gp4_featured_column_three_title', true ) && get_post_meta($post->ID, '_gp4_featured_column_three_content', true ) ) { ?>
-          <div class="col-lg-3 col-lg-offset-1 well well-featurette">
-            <h2 class="text-center">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_title', true); ?>
-            </h2>
-            <p class="movement">
-              <?php echo get_post_meta($post->ID, '_gp4_featured_column_three_content', true); ?>
-            </p>
+          <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-info" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
+                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
-        <?php } ?>
-    </div>
-<?php } ?>
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </div> <!-- center-block -->
+    <div class="container main-body">
+  <?php } ?>
