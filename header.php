@@ -104,6 +104,13 @@
     </div>
   <?php } ?>
   <?php if ( is_front_page() ) { ?>
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div class="text-center">
+          <img class="img-responsive" src="<?php bloginfo('stylesheet_directory'); ?>/img/future-of-collaboration.png">
+        </div>
+      </div>
+    </div>
     </div> <!-- container -->
     <div class="center-block">
       <div class="container">

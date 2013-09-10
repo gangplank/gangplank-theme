@@ -40,19 +40,13 @@ add_action( 'after_setup_theme', 'gp4_setup' );
  * @link http://stackoverflow.com/a/12380004/2096500
  * @since GP4 1.1
  */
-function webfont_rokkitt() {
-  wp_register_style('rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700');
-  wp_enqueue_style('rokkitt');
-  }
+// function webfont_rokkitt() {
+//   wp_register_style('rokkitt', 'http://fonts.googleapis.com/css?family=Rokkitt:400,700');
+//   wp_enqueue_style('rokkitt');
+//   }
 
-add_action('wp_print_styles', 'webfont_rokkitt');
+// add_action('wp_print_styles', 'webfont_rokkitt');
 
-function webfont_oswald() {
-  wp_register_style('oswald', 'http://fonts.googleapis.com/css?family=Oswald:400,700');
-  wp_enqueue_style('oswald');
-  }
-
-add_action('wp_print_styles', 'webfont_oswald');
 
 /**
  * Custom Excerpt Filters
