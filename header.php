@@ -30,43 +30,45 @@
 <body <?php body_class(); ?>>
 
 <nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">Gangplank</a>
-  </div>
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Gangplank</a>
+    </div>
 
-  <div class="collapse navbar-collapse navbar-ex1-collapse">
-    <ul class="nav navbar-nav">
-      <?php if (has_nav_menu( 'primary' )) {
-        $args['theme_location'] = 'primary';
-        $args['container'] = '';
-        $args['container_class'] = '';
-        $args['menu_class'] = 'main-menu';
-        $args['items_wrap'] = '%3$s';
-        $args['walker'] = new menu_walker();
-        wp_nav_menu($args);
-      } ?>
-      <li class="dropdown">
-        <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-          <?php if (has_nav_menu( 'footer_col_3' )) {
-            $args['container'] = '';
-            $args['container_class'] = '';
-            $args['menu_class'] = 'footer-menu';
-            $args['items_wrap'] = '%3$s';
-            $args['theme_location'] = 'footer_col_3';
-            $args['walker'] = new menu_walker();
-            wp_nav_menu($args);
-          } ?>
-        </ul>
-      </li>
-    </ul>
-  </div><!--/.navbar-collapse -->
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <?php if (has_nav_menu( 'primary' )) {
+          $args['theme_location'] = 'primary';
+          $args['container'] = '';
+          $args['container_class'] = '';
+          $args['menu_class'] = 'main-menu';
+          $args['items_wrap'] = '%3$s';
+          $args['walker'] = new menu_walker();
+          wp_nav_menu($args);
+        } ?>
+        <li class="dropdown">
+          <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">Locations <b class="caret"></b></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+            <?php if (has_nav_menu( 'footer_col_3' )) {
+              $args['container'] = '';
+              $args['container_class'] = '';
+              $args['menu_class'] = 'footer-menu';
+              $args['items_wrap'] = '%3$s';
+              $args['theme_location'] = 'footer_col_3';
+              $args['walker'] = new menu_walker();
+              wp_nav_menu($args);
+            } ?>
+          </ul>
+        </li>
+      </ul>
+    </div><!--/.navbar-collapse -->
+  </div><!--/.container -->
 </nav>
 <div class="container main-body">
   <header class="header">
