@@ -44,7 +44,7 @@
 		$(document).ready(function() {
 			$("input[type='text']").val('');
 			$("input[type='email']").val('');
-			$("input[tabindex='1']").focus();
+			$("input[tabindex='1']").focus().blur().focus();
 		});
 	</script>
 </head>
