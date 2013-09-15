@@ -18,6 +18,8 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 	<![endif]-->
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/normalize.min.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/foundation.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
@@ -38,6 +40,13 @@
 			-webkit-filter: opacity(0.77);
 		}
 	</style>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("input[type='text']").val('');
+			$("input[type='email']").val('');
+			$("input[tabindex='1']").focus();
+		});
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
