@@ -45,6 +45,7 @@
 			$("input[type='text']").val('');
 			$("input[type='email']").val('');
 			$("input[tabindex='1']").focus().blur().focus();
+			$("input[tabindex='1']").attr('autofocus', '');
 		});
 	</script>
 </head>
