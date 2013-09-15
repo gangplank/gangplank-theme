@@ -11,7 +11,7 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0, min-scale=1.0" />
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -22,6 +22,22 @@
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/css/foundation.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?> ">
+	<style type="text/css">
+		body {
+			font-size: 1.23rem;
+			padding: 23pt;
+		}
+		li {
+			list-style: none;
+		}
+		.gfield_required {
+			color: red;
+		}
+		input[type=text],
+		input[type=email] {
+			-webkit-filter: opacity(0.77);
+		}
+	</style>
 </head>
 
 <body <?php body_class(); ?>>
