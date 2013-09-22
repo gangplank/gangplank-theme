@@ -44,6 +44,7 @@
 		}
 		.gform_heading {
 			font-size: 2.3em;
+			line-height: 1em;
 		}
 	</style>
 	<script type="text/javascript">
