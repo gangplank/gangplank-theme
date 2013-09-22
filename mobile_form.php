@@ -25,9 +25,13 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/4.2.3/js/foundation.min.js"></script>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?> ">
 	<style type="text/css">
+		html {
+			height: 100%;
+		}
 		body {
 			font-size: 1.23rem;
 			padding: 23pt;
+			height:100%;
 		}
 		li {
 			list-style: none;
