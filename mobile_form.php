@@ -29,7 +29,6 @@
 			height: 100%;
 		}
 		body {
-			font-size: 1.23rem;
 			padding: 23pt;
 			height:100%;
 		}
@@ -42,6 +41,9 @@
 		input[type=text],
 		input[type=email] {
 			-webkit-filter: opacity(0.77);
+		}
+		.gform_heading {
+			font-size: 2.3em;
 		}
 	</style>
 	<script type="text/javascript">
