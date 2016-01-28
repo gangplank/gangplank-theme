@@ -34,6 +34,7 @@ get_header(); ?>
 	      <h3>Locations</h3>
 				<h4><a href="../avondale">Avondale, AZ</a></h4>
 				<h4><a href="../chandler">Chandler, AZ</a></h4>
+				<h4><a href="../queen-creek/">Queen Creek, AZ</a></h4>
 				<h4><a href="../richmond">Richmond, VA</a></h4>
 				<h4><a href="../sault">Sault St. Marie, ON</a></h4>
 				<h4><a href="../tucson">Tucson, AZ</a></h4>
