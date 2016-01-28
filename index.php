@@ -62,6 +62,12 @@ get_header(); ?>
 	        $em_categories = new EM_Categories();
 	        $em_category_ids = array();
 	        $em_neg_category_ids = array();
+		      $categories = get_the_category( $post->ID );
+		      $category_names = array_map(
+			  function($value) { return $value->name; },
+			  $categories
+		      );
+
 	        foreach ($em_categories->get() as $em_category) {
 	          if (in_array($em_category->name, $category_names)) {
 	            $em_category_ids[] = $em_category->id;
