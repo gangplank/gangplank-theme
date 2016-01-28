@@ -83,7 +83,7 @@
     </div>
 
     <div class="row">
-      <p><small>&copy; Copyright 2013 Gangplank Collective</small></p>
+      <p><small>&copy; Copyright <?php  echo date("Y"); ?> Gangplank Collective</small></p>
     </div>
   </div>
 </footer>
