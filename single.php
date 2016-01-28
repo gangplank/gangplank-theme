@@ -39,47 +39,7 @@ get_header(); ?>
 				<h4><a href="../sault">Sault St. Marie, ON</a></h4>
 				<h4><a href="../tucson">Tucson, AZ</a></h4>
 				<h4><a href="../start">Start</a> a Gangplank in your city!</h4>
-			</div>
-			
-			
-	    <div class="well">
-	      <h3>Upcoming Events</h3>
-	      <?php
-	        $em_categories = new EM_Categories();
-	        $em_category_ids = array();
-	        $em_neg_category_ids = array();
-				  $categories = get_the_category( $post->ID );
-		      $category_names = array_map(
-			  function($value) { return $value->name; },
-			  $categories
-		      );
-
-	        foreach ($em_categories->get() as $em_category) {
-	          if (in_array($em_category->name, $category_names)) {
-	            $em_category_ids[] = $em_category->id;
-	          } else {
-	            $em_neg_category_ids[] = '-' . $em_category->id;
-	          }
-	        }
-	        $em_category_ids = array(join(',', $em_category_ids), join(',', $em_neg_category_ids));
-	      ?>
-	      <?php $em_events = new EM_Events(); echo $em_events->output(array('category' => join(',', $em_category_ids), 'format_header' => '', 'format' => '<div class="row event"><div class="col-lg-4 date">#_{m/d h:ia} #@_{-<br/> m/d h:ia}</div><div class="col-lg-8">#_EVENTLINK{has_room}<br/>#_ATT{room} {/has_room}<br/>#_EVENTEXCERPT</div></div>')); ?>
-	      <div class="row">
-	        <div class="col-lg-12">
-	          <br/>
-	          <a href="" class="pull-right">More Events...</a>
-	        </div>
-	      </div>
-	    </div>
+			</div>			
 	</div>
-
-
-
 </div>
-
-
-
-
-
-
 <?php get_footer(); ?>
