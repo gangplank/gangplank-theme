@@ -241,3 +241,21 @@ div.wp-caption {
 .page-template-mobile_form-php .gform_description {
   margin:32pt;
 }
+
+/*------------------------------------------------------------------
+ * [ Elements/Misc: Member Directory ]
+ * */
+
+.member-listings .member {
+  text-align: center;
+}
+
+.member-listings .member-name {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.member-listings .member-badges i {
+  color: #999;
+}
+

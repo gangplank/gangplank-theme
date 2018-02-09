@@ -52,12 +52,22 @@ add_action( 'after_setup_theme', 'gp4_setup' );
  * Custom Excerpt Filters
 */
 function custom_excerpt_length( $length ) {
-	return 30;
+    return 30;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 function new_excerpt_more( $more ) {
-	return ' [ <a href="'. get_permalink( get_the_ID() ) . '">...</a> ]';	
+    return ' [ <a href="'. get_permalink( get_the_ID() ) . '">...</a> ]';   
 }
 add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+/**
+ * Fontawesome 5 Pro:
+*/
+function enqueue_fontawesome_pro() {
+    wp_enqueue_style( 'fontawesome-pro-css', get_stylesheet_directory_uri() . '/fontawesome/fa-svg-with-js.css' );
+    wp_enqueue_script( 'fontawesome-pro-js', get_stylesheet_directory_uri() . '/fontawesome/fontawesome-all.min.js', array(), null );
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_fontawesome_pro' );
+
