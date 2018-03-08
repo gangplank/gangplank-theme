@@ -209,6 +209,10 @@ function gp4_save_postdata( $post_id ) {
 
   // Thirdly we can save the value to the database:
 
+  $kses_allowed_tags = array(
+    'p', 'div', 'span', 'strong', 'em',
+  );
+
   // If saving in a custom table, get post_ID:
   $post_ID = $_POST['post_ID'];
   // Sanitize user input:
@@ -217,22 +221,22 @@ function gp4_save_postdata( $post_id ) {
   // Hero:
   $gp4_hero_title = sanitize_text_field( $_POST['_gp4_hero_title'] );
   $gp4_hero_subtitle = sanitize_text_field( $_POST['_gp4_hero_subtitle'] );
-  $gp4_hero_button_url = sanitize_text_field( $_POST['_gp4_hero_button_url'] );
+  $gp4_hero_button_url = sanitize_url( $_POST['_gp4_hero_button_url'] );
   $gp4_hero_button_title = sanitize_text_field( $_POST['_gp4_hero_button_title'] );
   // Featured Column 1:
   $gp4_featured_column_one_title = sanitize_text_field( $_POST['_gp4_featured_column_one_title'] );
-  $gp4_featured_column_one_content = $_POST['_gp4_featured_column_one_content'];
-  $gp4_featured_column_one_button_url = sanitize_text_field( $_POST['_gp4_featured_column_one_button_url'] );
+  $gp4_featured_column_one_content = wp_kses( $_POST['_gp4_featured_column_one_content'], $kses_allowed_tags );
+  $gp4_featured_column_one_button_url = sanitize_url( $_POST['_gp4_featured_column_one_button_url'] );
   $gp4_featured_column_one_button_title = sanitize_text_field( $_POST['_gp4_featured_column_one_button_title'] );
   // Featured Column 2:
   $gp4_featured_column_two_title = sanitize_text_field( $_POST['_gp4_featured_column_two_title'] );
-  $gp4_featured_column_two_content = $_POST['_gp4_featured_column_two_content'];
-  $gp4_featured_column_two_button_url = sanitize_text_field( $_POST['_gp4_featured_column_two_button_url'] );
+  $gp4_featured_column_two_content = wp_kses( $_POST['_gp4_featured_column_two_content'], $kses_allowed_tags );
+  $gp4_featured_column_two_button_url = sanitize_url( $_POST['_gp4_featured_column_two_button_url'] );
   $gp4_featured_column_two_button_title = sanitize_text_field( $_POST['_gp4_featured_column_two_button_title'] );
   // Featured Column 3:
   $gp4_featured_column_three_title = sanitize_text_field( $_POST['_gp4_featured_column_three_title'] );
-  $gp4_featured_column_three_content = $_POST['_gp4_featured_column_three_content'];
-  $gp4_featured_column_three_button_url = sanitize_text_field( $_POST['_gp4_featured_column_three_button_url'] );
+  $gp4_featured_column_three_content = wp_kses( $_POST['_gp4_featured_column_three_content'], $kses_allowed_tags );
+  $gp4_featured_column_three_button_url = sanitize_url( $_POST['_gp4_featured_column_three_button_url'] );
   $gp4_featured_column_three_button_title = sanitize_text_field( $_POST['_gp4_featured_column_three_button_title'] );
 
 
