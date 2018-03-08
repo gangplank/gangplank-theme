@@ -166,21 +166,21 @@
           <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
+                <a class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_one_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
           <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
+                <a class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_two_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
           <div class="col-lg-4">
             <?php if (get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true)) { ?>
               <p class="text-center">
-                <a target="_blank" class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
+                <a class="btn btn-default" href="<?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_url', true) ?>"><?php echo get_post_meta($post->ID, '_gp4_featured_column_three_button_title', true) ?></a>
               </p>
             <?php } ?>
           </div>
