@@ -32,10 +32,10 @@ get_header(); ?>
 
 	    <div class="well">
 	      <h3>Locations</h3>
-				<h4><a href="../avondale">Avondale, AZ</a></h4>
-				<h4><a href="../chandler">Chandler, AZ</a></h4>
-				<h4><a href="../queen-creek/">Queen Creek, AZ</a></h4>
-				<h4><a href="../start">Start</a> a Gangplank in your city!</h4>
+				<h4><a href="http://gangplankhq.com/avondale">Avondale, AZ</a></h4>
+				<h4><a href="http://gangplankhq.com/chandler">Chandler, AZ</a></h4>
+				<h4><a href="http://gangplankhq.com/queen-creek/">Queen Creek, AZ</a></h4>
+				<h4><a href="https://gangplankhq.com/get-involved/">Start</a> a Gangplank in your city!</h4>
 			</div>
 	</div>
 </div>
