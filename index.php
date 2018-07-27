@@ -38,22 +38,20 @@ get_header(); ?>
 
 			<?php endif; ?>
 	</div>
-	
+
 	<div class="col-lg-5 pull-right">
 		  <p class="text-center">
 				<a href="http://gangplankhq.com/get-involved">
 					<button class="btn btn-large btn-block btn-success" type="button">Get Involved!</button>
 				</a>
 			</p>
-
+<?php home_url( '/avondale/' ) ?>
 	    <div class="well">
 	      <h3>Locations</h3>
-				<h4><a href="../avondale/">Avondale, AZ</a></h4>
-				<h4><a href="../chandler/">Chandler, AZ</a></h4>
-				<h4><a href="../queen-creek/">Queen Creek, AZ</a></h4>
-				<h4><a href="../richmond/">Richmond, VA</a></h4>
-				<h4><a href="../sault/">Sault St. Marie, ON</a></h4>
-				<h4><a href="../start/">Start</a> a Gangplank in your city!</h4>
+				<h4><a href="<?php home_url( 'avondale/' ) ?>">Avondale, AZ</a></h4>
+				<h4><a href="<?php home_url( 'chandler/' ) ?>">Chandler, AZ</a></h4>
+				<h4><a href="<?php home_url( 'queen-creek/' ) ?>">Queen Creek, AZ</a></h4>
+				<h4><a href="<?php home_url( 'get-involved/' ) ?>">Start</a> a Gangplank in your city!</h4>
 			</div>
 	</div>
 </div>
